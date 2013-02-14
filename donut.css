@@ -1,0 +1,26 @@
+#bowlG {
+  position: relative;
+  width: 128px;
+  height: 128px;
+}
+
+#bowl_ringG {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  border: 20px solid #000000;
+
+  -moz-border-radius: 128px;
+  -webkit-border-radius: 128px;
+  -ms-border-radius: 128px;
+  -o-border-radius: 128px;
+  border-radius: 128px;
+}
+
+.ball_holderG {
+  position: absolute;
+  width: 34px;
+  height: 128px;
+  left: 47px;
+  top: 0px;
+}

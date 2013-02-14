@@ -1,0 +1,136 @@
+<style>
+    body {
+        font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+        font-size: 13px;
+    }
+
+    .container {
+        width: 450px;
+        margin: 40px auto;
+        overflow: hidden;
+    }
+
+    .donut {
+        text-align: center;
+        position: relative;
+        height: 33px;
+        width: 66px;
+    }
+
+    .loader {
+        -webkit-transform: rotate(45deg);
+        width: 50px;
+        height: 50px;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+
+        margin: auto;
+
+        -webkit-border-radius: 70%;
+        -moz-border-radius: 70%;
+        border-radius: 70%;
+
+        -webkit-animation: rotate 2s infinite linear;
+        -moz-animation: rotate 2s infinite linear;
+        -ms-animation: rotate 2s infinite linear;
+        animation: rotate 2s infinite linear;
+    }
+
+    .arrow:before {
+        content: attr(data-deg)"deg";
+        /*-webkit-transform: rotate(attr(data-deg)"deg");*/
+    }
+
+    .arrow {
+        height: 33px;
+        width: 2px;
+        background: black;
+        display: inline-block;
+        z-index: 1000;
+        -webkit-transform-origin: 50% 100%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        box-sizing: border-box;
+        margin-left: -1px;
+    }
+
+    .loader.yellow {
+        border-left: 8px solid #CCC366;
+        border-top: 8px solid #CCC366;
+    }
+
+    .loader.orange {
+        border-left: 8px solid #CC8F66;
+        border-top: 8px solid #CC8F66;
+    }
+
+    .loader.red {
+        border-left: 8px solid #CC6866;
+        border-top: 8px solid #CC6866;
+    }
+
+    .loader.pink {
+        border-left: 8px solid #CC66C3;
+        border-top: 8px solid #CC66C3;
+    }
+
+    .loader.violet {
+        border-left: 8px solid #A366CC;
+        border-top: 8px solid #A366CC;
+    }
+
+    .loader.blue {
+        border-left: 8px solid #6670CC;
+        border-top: 8px solid #6670CC;
+    }
+
+    .loader.green {
+        border-left: 8px solid #66CC74;
+        border-top: 8px solid #66CC74;
+    }
+
+
+</style>
+
+<div class="container">
+
+    <div class="donut">
+        <div class="loader yellow"></div>
+        <div class="arrow" data-deg="45"></div>
+    </div>
+
+    <div class="donut">
+        <div class="loader orange"></div>
+        <div class="arrow" data-deg="63"></div>
+    </div>
+
+    <div>
+        <div class="loader red"></div>
+    </div>
+
+    <div>
+        <div class="loader pink"></div>
+    </div>
+
+    <div>
+        <div class="loader pink"></div>
+    </div>
+
+    <div>
+        <div class="loader violet"></div>
+    </div>
+
+    <div>
+        <div class="loader blue"></div>
+    </div>
+
+    <div>
+        <div class="loader green"></div>
+    </div>
+
+</div>
+
+<script>
+    
+</script>
