@@ -1,0 +1,109 @@
+@import "compass/css3";
+
+$yellow: #CCC366;
+$orange: #CC8F66;
+$red: #CC6866;
+$pink: #CC66C3;
+$violet: #A366CC;
+$blue: #6670CC;
+$green: #66CC74;
+
+@mixin donut($size, $border, $arrow) {
+  $height: ($size + $border * 2) / 2;
+  height: $height;
+
+  .donut-bow {
+    width: $size;
+    height: $size;
+    border-width: $border;
+  }
+
+  .donut-arrow {
+    height: $height;
+    width: $arrow;
+    margin-left: -$arrow / 2;
+
+    &:before {
+      height: $arrow * 2;
+      width: $arrow * 2;
+      bottom: -$arrow;
+      margin-left: -$arrow;
+    }
+  }
+}
+
+.donut {
+  position: relative;
+  display: inline-block;
+
+  .donut-bow {
+    border-style: solid;
+    border-color: transparent;
+    @include transform(rotate(45deg));
+    @include border-radius(100%);
+
+    &.yellow {
+      border-left-color: $yellow;
+      border-top-color: $yellow;
+    }
+    &.orange {
+      border-left-color: $orange;
+      border-top-color: $orange;
+    }
+    &.red {
+      border-left-color: $red;
+      border-top-color: $red;
+    }
+    &.pink {
+      border-left-color: $pink;
+      border-top-color: $pink;
+    }
+    &.violet {
+      border-left-color: $violet;
+      border-top-color: $violet;
+    }
+    &.blue {
+      border-left-color: $blue;
+      border-top-color: $blue;
+    }
+    &.green {
+      border-left-color: $green;
+      border-top-color: $green;
+    }
+  }
+
+  .donut-arrow {
+    bottom: 0;
+
+    $origin: 50% 100%;
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    transform-origin: $origin;
+
+    @include transition(all .5s);
+
+    &, &:before {
+      position: absolute;
+      display: inline-block;
+      background: #333;
+      left: 50%;
+      @include box-sizing(border-box);
+    }
+
+    &:before {
+      content: '';
+      @include border-radius(100%);
+    }
+  }
+
+  @include donut(50px, 8px, 2px);
+
+  &.donut-big {
+    @include donut(100px, 12px, 4px);
+  }
+  &.donut-small {
+    @include donut(25px, 4px, 1px);
+  }
+}

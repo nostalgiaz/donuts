@@ -1,0 +1,153 @@
+/* line 35, ../sass/donuts.scss */
+.donut {
+  position: relative;
+  display: inline-block;
+  height: 33px;
+}
+/* line 39, ../sass/donuts.scss */
+.donut .donut-bow {
+  border-style: solid;
+  border-color: transparent;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 45, ../sass/donuts.scss */
+.donut .donut-bow.yellow {
+  border-left-color: #ccc366;
+  border-top-color: #ccc366;
+}
+/* line 49, ../sass/donuts.scss */
+.donut .donut-bow.orange {
+  border-left-color: #cc8f66;
+  border-top-color: #cc8f66;
+}
+/* line 53, ../sass/donuts.scss */
+.donut .donut-bow.red {
+  border-left-color: #cc6866;
+  border-top-color: #cc6866;
+}
+/* line 57, ../sass/donuts.scss */
+.donut .donut-bow.pink {
+  border-left-color: #cc66c3;
+  border-top-color: #cc66c3;
+}
+/* line 61, ../sass/donuts.scss */
+.donut .donut-bow.violet {
+  border-left-color: #a366cc;
+  border-top-color: #a366cc;
+}
+/* line 65, ../sass/donuts.scss */
+.donut .donut-bow.blue {
+  border-left-color: #6670cc;
+  border-top-color: #6670cc;
+}
+/* line 69, ../sass/donuts.scss */
+.donut .donut-bow.green {
+  border-left-color: #66cc74;
+  border-top-color: #66cc74;
+}
+/* line 75, ../sass/donuts.scss */
+.donut .donut-arrow {
+  bottom: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 87, ../sass/donuts.scss */
+.donut .donut-arrow, .donut .donut-arrow:before {
+  position: absolute;
+  display: inline-block;
+  background: #333;
+  left: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 95, ../sass/donuts.scss */
+.donut .donut-arrow:before {
+  content: '';
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 15, ../sass/donuts.scss */
+.donut .donut-bow {
+  width: 50px;
+  height: 50px;
+  border-width: 8px;
+}
+/* line 21, ../sass/donuts.scss */
+.donut .donut-arrow {
+  height: 33px;
+  width: 2px;
+  margin-left: -1px;
+}
+/* line 26, ../sass/donuts.scss */
+.donut .donut-arrow:before {
+  height: 4px;
+  width: 4px;
+  bottom: -2px;
+  margin-left: -2px;
+}
+/* line 103, ../sass/donuts.scss */
+.donut.donut-big {
+  height: 62px;
+}
+/* line 15, ../sass/donuts.scss */
+.donut.donut-big .donut-bow {
+  width: 100px;
+  height: 100px;
+  border-width: 12px;
+}
+/* line 21, ../sass/donuts.scss */
+.donut.donut-big .donut-arrow {
+  height: 62px;
+  width: 4px;
+  margin-left: -2px;
+}
+/* line 26, ../sass/donuts.scss */
+.donut.donut-big .donut-arrow:before {
+  height: 8px;
+  width: 8px;
+  bottom: -4px;
+  margin-left: -4px;
+}
+/* line 106, ../sass/donuts.scss */
+.donut.donut-small {
+  height: 16.5px;
+}
+/* line 15, ../sass/donuts.scss */
+.donut.donut-small .donut-bow {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+}
+/* line 21, ../sass/donuts.scss */
+.donut.donut-small .donut-arrow {
+  height: 16.5px;
+  width: 1px;
+  margin-left: -0.5px;
+}
+/* line 26, ../sass/donuts.scss */
+.donut.donut-small .donut-arrow:before {
+  height: 2px;
+  width: 2px;
+  bottom: -1px;
+  margin-left: -1px;
+}
