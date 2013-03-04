@@ -1,87 +1,49 @@
 @import "compass/css3";
 
-$yellow: #CCC366;
-$orange: #CC8F66;
 $red: #CC6866;
-$pink: #CC66C3;
-$violet: #A366CC;
-$blue: #6670CC;
+$orange: #CC8F66;
+$yellow: #CCC366;
 $green: #66CC74;
-
-@mixin donut($size, $border, $arrow) {
-  $height: ($size + $border * 2) / 2;
-  height: $height;
-
-  .donut-bow {
-    width: $size;
-    height: $size;
-    border-width: $border;
-  }
-
-  .donut-arrow {
-    height: $height;
-    width: $arrow;
-    margin-left: -$arrow / 2;
-
-    &:before {
-      height: $arrow * 2;
-      width: $arrow * 2;
-      bottom: -$arrow;
-      margin-left: -$arrow;
-    }
-  }
-}
 
 .donut {
   position: relative;
   display: inline-block;
+  font-size: 33px;
+  line-height: 1em;
+  height: 1em;
+  width: 2em;
+  @include box-sizing(border-box);
 
-  .donut-bow {
-    border-style: solid;
-    border-color: transparent;
-    @include transform(rotate(45deg));
+  &.donut-big {
+    font-size: 62px;
+  }
+
+  &.donut-small {
+    font-size: 17px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    font-size: 100%;
+    height: 2em;
+    width: 2em;
+    line-height: 1em;
+    border: .22em solid #666;
+    @include box-sizing(border-box);
     @include border-radius(100%);
-
-    &.yellow {
-      border-left-color: $yellow;
-      border-top-color: $yellow;
-    }
-    &.orange {
-      border-left-color: $orange;
-      border-top-color: $orange;
-    }
-    &.red {
-      border-left-color: $red;
-      border-top-color: $red;
-    }
-    &.pink {
-      border-left-color: $pink;
-      border-top-color: $pink;
-    }
-    &.violet {
-      border-left-color: $violet;
-      border-top-color: $violet;
-    }
-    &.blue {
-      border-left-color: $blue;
-      border-top-color: $blue;
-    }
-    &.green {
-      border-left-color: $green;
-      border-top-color: $green;
-    }
+    clip: rect(auto, auto, 1em, auto);
   }
 
   .donut-arrow {
-    bottom: 0;
-
-    $origin: 50% 100%;
-    -webkit-transform-origin: $origin;
-    -moz-transform-origin: $origin;
-    -ms-transform-origin: $origin;
-    -o-transform-origin: $origin;
-    transform-origin: $origin;
-
+    height: 1em;
+    width: .1em;
+    margin-left: -.05em;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     @include transition(all .5s);
 
     &, &:before {
@@ -94,16 +56,27 @@ $green: #66CC74;
 
     &:before {
       content: '';
+      height: .2em;
+      width: .2em;
+      bottom: -.1em;
+      margin-left: -.1em;
       @include border-radius(100%);
     }
   }
+}
 
-  @include donut(50px, 8px, 2px);
+.red.donut:before {
+  border-color: $red;
+}
 
-  &.donut-big {
-    @include donut(100px, 12px, 4px);
-  }
-  &.donut-small {
-    @include donut(25px, 4px, 1px);
-  }
+.orange.donut:before {
+  border-color: $orange;
+}
+
+.yellow.donut:before {
+  border-color: $yellow;
+}
+
+.green.donut:before {
+  border-color: $green;
 }

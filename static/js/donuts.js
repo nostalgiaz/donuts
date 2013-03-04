@@ -15,12 +15,14 @@ $(function () {
 
     $this.css('transform', 'rotate(' + (percentage - 90) + 'deg)');
 
-    if (percentage < 60)
+    if (percentage < 45)
       color = 'red';
-    else if (percentage < 120)
+    else if (percentage < 90)
+      color = 'orange';
+    else if (percentage < 135)
       color = 'yellow';
     else color = 'green';
 
-    $this.siblings().addClass(color);
+    $this.parent().addClass(color);
   });
 });
