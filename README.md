@@ -39,4 +39,4 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 Credits
 -------
-[Arne Hormann](https://github.com/ahormann) helps me to simplify the structure, the css and the js
+[Arne Hormann](https://github.com/arnehormann) helps me to simplify the structure, the css and the js
