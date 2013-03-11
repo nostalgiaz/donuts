@@ -15,7 +15,7 @@ $(function () {
             percentage = 0;
 
         $this.css('transform', 'rotate(' + ((1.8 * percentage) - 90) + 'deg)');
-        $this.parent().removeClass('red yellow green').addClass(colors[Math.floor(percentage / segmentSize)]);
+        $this.parent().removeClass(colors.join(' ')).addClass(colors[Math.floor(percentage / segmentSize)]);
     }
 
     $('.donut-arrow').each(function () {
