@@ -32,6 +32,13 @@ Example
 </div>
 ```
 
+Update Donut Percentage
+-----------------------
+Just target your arrow of choice and call the custom event below with the new percentage as an argument.
+``` javascript
+$('.donut-arrow').trigger('updatePercentage', 100)
+```
+
 License
 -------
 Licensed under the Apache License, Version 2.0
