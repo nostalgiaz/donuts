@@ -82,12 +82,31 @@
 &lt;/div></pre>
             </div>
         </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="bs-docs-example">
+                    <div id="myDonut" class="donut donut-big">
+                        <div class="donut-arrow" data-percentage="10"></div>
+                    </div>
+                    <div id="myButton" class="btn btn-danger" style="margin-left: 10px">Update percentage</div>
+                </div>
+                <pre class="prettyprint linenums">
+$('#myButton').on('click', function () {
+   $('#myDonut').find('.donut-arrow').trigger('updatePercentage', Math.floor((Math.random()*100)))
+});</pre>
+            </div>
+        </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
     <script src="static/js/donuts.js"></script>
     <script>
         window.prettyPrint && prettyPrint();
+        $(function () {
+            $('#myButton').on('click', function () {
+               $('#myDonut').find('.donut-arrow').trigger('updatePercentage', Math.floor((Math.random()*100)))
+            });
+        });
     </script>
 </body>
 </html>
