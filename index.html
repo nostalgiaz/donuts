@@ -103,6 +103,8 @@ $('#myButton').on('click', function () {
     <script>
         window.prettyPrint && prettyPrint();
         $(function () {
+            /*to select a button tag,whenever it is clicked,div my donut tag is selected and the value off the percentage is updated 
+            to a random value */
             $('#myButton').on('click', function () {
                $('#myDonut').find('.donut-arrow').trigger('updatePercentage', Math.floor((Math.random()*100)))
             });
